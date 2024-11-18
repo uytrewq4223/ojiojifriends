@@ -1,0 +1,8 @@
+# Node.js modules
+node_modules/
+
+# Next.js build files
+.next/
+
+# Logs and temporary files
+*.log

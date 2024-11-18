@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-base: #1A1A1D;
+  --color-main: #3B1C32;
+  --color-second: #F5F5F7;
+  --color-accent: #A64D79;
+}
+
+@layer base {
+  body {
+    @apply bg-second text-base;
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    overflow-x:hidden;
+  }
+}
+
+@layer utilities {
+  .bg-base {
+    background-color: var(--color-base);
+  }
+  .bg-main {
+    background-color: var(--color-main);
+  }
+  .bg-second {
+    background-color: var(--color-second);
+  }
+  .bg-accent {
+    background-color: var(--color-accent);
+  }
+  .text-base {
+    color: var(--color-base);
+  }
+  .text-main {
+    color: var(--color-main);
+  }
+  .text-second {
+    color: var(--color-second);
+  }
+  .text-accent {
+    color: var(--color-accent);
+  }
+}
