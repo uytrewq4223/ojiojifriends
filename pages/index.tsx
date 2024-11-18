@@ -8,7 +8,7 @@ import BannerSection from '../components/BannerSection'; // インポート
 const MenuTile = ({ title, imageSrc, href }) => (
   <Link href={href} legacyBehavior>
     <a className="group">
-      <div className="relative w-full pb-[55%]"> {/* 縦方向の余白を減らす */}
+      <div className="relative w-full pb-[55%]"> {/* 縦方向の余白を減らす*/}
         <Image
           src={imageSrc}
           alt={title}
