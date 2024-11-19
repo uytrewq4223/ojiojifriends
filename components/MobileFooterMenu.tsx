@@ -48,7 +48,7 @@ const MobileFooterMenu = () => {
         </Link>
         {/* 電話 */}
         <Link
-          href="tel:+81123456789" // ダミー電話番号
+          href="tel:+818096179351" // ダミー電話番号
           className="flex flex-col items-center p-2"
         >
           <Phone className="w-6 h-6 mb-1" aria-hidden="true" />
