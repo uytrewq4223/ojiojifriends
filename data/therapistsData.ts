@@ -4,7 +4,7 @@ export const therapistsData = [
       name: "まこと",
       age: 32,
       height: 172,
-      description: "ユーモアがあり、周囲を和ませる存在です。",
+      description: "ユーモアがあり、周囲を和ませる存在です",
       tags: ["セクシー", "力持ち"],
       questions: [
         { question: "好きな食べ物は？", answer: "スシロー" },
@@ -19,6 +19,27 @@ export const therapistsData = [
       ],
       options: ["何でもOKです！"],
       twitter:"mdat_sapporo"
+    },
+    {
+      id: "ttakahashi",
+      name: "TAKA",
+      age: 27,
+      height: 171,
+      description: "なごやかムードメーカーです！！やさしくあなたをリードします！",
+      tags: ["笑顔", "トーク"],
+      questions: [
+        { question: "好きな食べ物は？", answer: "トリトンです！" },
+        { question: "体型は？", answer: "普通だと思います" },
+        { question: "特技は？", answer: "ウッドベースが弾けます笑" },
+        { question: "お客様になんて呼ばれたいですか？", answer: "たかくん" },
+        { question: "チャームポイントは？", answer: "右足首にあるほくろかな" },
+        { question: "得意なプレイは？", answer: "デートなどでドキッとさせること！" },
+        { question: "タバコは吸いますか？", answer: "吸いますが、苦手の方の前では吸いません" },
+        { question: "お酒は飲みますか？", answer: "日本酒が好きです！" },
+        { question: "ドキッとしちゃう女性の仕草は？", answer: "靴をそろえるためにかがむとき" }
+      ],
+      options: ["何でもOKです！"],
+      twitter:"shokun358"
     },
     
     

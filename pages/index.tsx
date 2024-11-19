@@ -48,6 +48,11 @@ export default function Home() {
             imageSrc="/images/main/menu3.png"
             href="/feeSystem"
           />
+          <MenuTile
+            title="求人のお知らせ"
+            imageSrc="/images/main/menu4.jpg"
+            href="/recruit"
+          />
         </div>
       </div>
       {/* バナーセクション */}

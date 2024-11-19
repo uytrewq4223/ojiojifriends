@@ -13,13 +13,16 @@ const BannerSection = () => {
     <div className="mt-8">
       {banners.map((banner, index) => {
         const BannerContent = (
-          <div className="relative w-[90%] pb-[33.33%] max-w-screen-lg mx-auto mb-6">
-            <Image
-              src={banner.src}
-              alt={banner.alt}
-              layout="fill"
-              objectFit="cover"
-            />
+          <div className="relative w-full max-w-screen-lg mx-auto mb-6">
+            <div className="relative w-[95%] pb-[33.33%] md:w-[80%] mx-auto">
+              <Image
+                src={banner.src}
+                alt={banner.alt}
+                layout="fill"
+                objectFit="cover"
+                className="rounded-lg shadow-md"
+              />
+            </div>
           </div>
         );
 

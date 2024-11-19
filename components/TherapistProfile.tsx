@@ -1,14 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
+import React, { useState, useEffect } from "react";
+import Image from "next/image";
 
 const TherapistProfile = ({ therapist }) => {
   const imageCount = 5;
-  const images = Array.from({ length: imageCount }, (_, i) => `${therapist.id}${i + 1}.jpg`);
+  const images = Array.from(
+    { length: imageCount },
+    (_, i) => `${therapist.id}${i + 1}.jpg`
+  );
   const [mainImage, setMainImage] = useState(images[0]);
 
   // Twitterウィジェットを動的にロード
   useEffect(() => {
-    if (typeof window !== 'undefined' && (window as any).twttr) {
+    if (typeof window !== "undefined" && (window as any).twttr) {
       (window as any).twttr.widgets.load();
     }
   }, []);
@@ -27,10 +30,16 @@ const TherapistProfile = ({ therapist }) => {
               className="rounded-md shadow-md"
             />
             {/* 下部グラデーションとテキスト */}
-            <div className="absolute bottom-0 left-0 w-full h-1/4 bg-gradient-to-t from-black to-transparent text-white p-4 rounded-b-lg">
-              <h1 className="text-2xl font-bold">{therapist.name}</h1>
-              <p className="text-sm">年齢: {therapist.age}歳 / 身長: {therapist.height}cm</p>
-              <p className="text-sm mt-1">{therapist.description}</p>
+            <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent text-white p-4">
+              <h1 className="text-xl md:text-2xl font-bold truncate">
+                {therapist.name}
+              </h1>
+              <p className="text-xs md:text-sm mt-1">
+                {`年齢: ${therapist.age}歳 / 身長: ${therapist.height}cm`}
+              </p>
+              <p className="text-xs md:text-sm mt-1 line-clamp-2">
+                {therapist.description}
+              </p>
             </div>
           </div>
           {/* サムネイル */}
@@ -38,9 +47,8 @@ const TherapistProfile = ({ therapist }) => {
             {images.map((image, index) => (
               <div
                 key={index}
-                className={`relative w-16 h-16 cursor-pointer rounded-lg overflow-hidden ${
-                  mainImage === image ? 'ring-4 ring-accent' : 'ring-1 ring-gray-300'
-                } transition-all duration-300`}
+                className={`relative w-16 h-16 cursor-pointer rounded-lg overflow-hidden ${mainImage === image ? "ring-4 ring-accent" : "ring-1 ring-gray-300"
+                  } transition-all duration-300`}
                 onClick={() => setMainImage(image)}
               >
                 <Image
@@ -60,24 +68,38 @@ const TherapistProfile = ({ therapist }) => {
           {/* 質問と回答セクション */}
           <div className="bg-gray-900 text-second p-6 rounded-md shadow-md mb-6">
             <h2 className="text-2xl font-semibold mb-4">セラピストに質問</h2>
-            <table className="w-full border-collapse">
-              <tbody>
-                {therapist.questions.map((q, index) => (
-                  <tr key={index} className="border-b border-second border-opacity-20">
-                    <td className="text-sm font-semibold py-2 px-4 w-1/3">{q.question}</td>
-                    <td className="text-sm py-2 px-4">{q.answer}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+            <ul className="divide-y divide-gray-700">
+              {therapist.questions.map((q, index) => (
+                <li
+                  key={index}
+                  className="py-4 md:flex md:items-start md:space-x-4 md:space-y-0"
+                >
+                  {/* 質問部分 */}
+                  <p className="text-sm md:text-lg font-semibold mb-2 md:mb-0 md:w-1/3">
+                    <span className="text-accent font-bold">Q:</span> {q.question}
+                  </p>
+                  {/* 回答部分 */}
+                  <p className="text-sm md:text-lg md:w-2/3">
+                    <span className="text-accent font-bold">A:</span> {q.answer}
+                  </p>
+                </li>
+              ))}
+            </ul>
           </div>
+
+
+
+
 
           {/* オプションセクション */}
           <div className="bg-gray-900 text-second p-6 rounded-md shadow-md mb-6">
             <h2 className="text-2xl font-semibold mb-4">オプション</h2>
             <div className="flex flex-wrap gap-2">
               {therapist.options.map((option, index) => (
-                <span key={index} className="bg-accent text-second text-sm px-4 py-2 rounded-sm">
+                <span
+                  key={index}
+                  className="bg-accent text-second text-sm px-4 py-2 rounded-sm"
+                >
                   {option}
                 </span>
               ))}
@@ -87,7 +109,9 @@ const TherapistProfile = ({ therapist }) => {
           {/* Twitter埋め込みセクション */}
           {therapist.twitter && (
             <div className="mt-8">
-              <h2 className="text-2xl font-semibold mb-4">{therapist.name}の投稿</h2>
+              <h2 className="text-2xl font-semibold mb-4">
+                {therapist.name}の投稿
+              </h2>
               <a
                 className="twitter-timeline"
                 data-height="400"
