@@ -10,7 +10,7 @@ const TodayTherapists = () => {
 
   return (
     <div className="my-8">
-      <h2 className="text-center text-2xl font-bold mb-6">今日遊べるセラピスト</h2>
+      <h2 className="text-center text-2xl font-bold mb-6">今日遊べるおじさまたち</h2>
       <div className="container mx-auto max-w-[90%] p-4 border-4 border-yellow-500 rounded-lg shadow-xl bg-gradient-to-br from-yellow-200 to-yellow-400">
         {/* 横スクロールエリア */}
         <div

@@ -28,9 +28,9 @@ export default function Home() {
   return (
     <Layout>
       <HeroSection
-        title="真夜中のアトリエへようこそ"
-        subtitle="札幌女性用風俗"
-        backgroundImage="/images/hero/heroHome.png"
+        title="おじおじフレンズへようこそ"
+        subtitle="札幌発・おじさんのみを集めた女性用風俗店！じじいの秘技をとくとご覧あれ！"
+        backgroundImage="/images/hero/heroHome.jpg"
       />
 
       <div className="mt-4 relative w-full max-w-screen-lg mx-auto mb-6">

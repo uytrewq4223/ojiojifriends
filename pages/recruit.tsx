@@ -9,7 +9,7 @@ export default function Recruit() {
             <HeroSection
                 title="採用情報"
                 subtitle="真夜中のアトリエ札幌店で新たなキャリアを始めませんか？"
-                backgroundImage="/images/hero/recruitHero.png"
+                backgroundImage="/images/hero/heroHome.jpg"
             />
 
             {/* トップ文章 */}

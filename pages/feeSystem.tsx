@@ -8,7 +8,7 @@ const FeeSystem = () => {
       <HeroSection 
         title="コース・料金表"
         subtitle="最高の「癒し」をお約束いたします。"
-        backgroundImage="/images/hero/heroHome.png"
+        backgroundImage="/images/hero/heroHome.jpg"
       />
       <div className="container mx-auto py-8 ">
         <section className="mb-12 w-[80%] mx-auto">
