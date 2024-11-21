@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const BannerSection = () => {
   const banners = [
-    { src: '/images/banner/1.png', alt: 'Banner 1', link: 'https://line.me/R/ti/p/@505cwyqt' },
+    { src: '/images/banner/1.png', alt: 'Banner 1', link: '/recruit' },
     { src: '/images/banner/2.png', alt: 'Banner 2', link: '' },
     { src: '/images/banner/3.png', alt: 'Banner 3', link: '' },
     { src: '/images/banner/4.png', alt: 'Banner 4', link: '' } ,
