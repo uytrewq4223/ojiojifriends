@@ -13,7 +13,7 @@ const Header = () => {
           </Link>
           {/* サイト名 */}
           <Link href="/" className="text-2xl font-bold text-second" style={{ fontFamily: "Times New Roman, serif" }}>
-            真夜中のアトリエ
+            真夜中のアトリエ 札幌
           </Link>
         </div>
         
