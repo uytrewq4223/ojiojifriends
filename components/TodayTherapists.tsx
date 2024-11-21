@@ -13,15 +13,20 @@ const TodayTherapists = () => {
       <h2 className="text-center text-2xl font-bold mb-6">今日遊べるセラピスト</h2>
       <div className="container mx-auto max-w-[90%] p-4 border-4 border-yellow-500 rounded-lg shadow-xl bg-gradient-to-br from-yellow-200 to-yellow-400">
         {/* 横スクロールエリア */}
-        <div className="flex overflow-x-auto gap-6 pb-4">
+        <div
+          className="flex overflow-x-auto gap-4 pb-4 scrollbar-hide"
+          style={{
+            WebkitOverflowScrolling: 'touch', // スクロールのスムーズさを改善
+          }}
+        >
           {availableTherapists.map((therapist) => (
             <Link
               key={therapist.id}
               href={`/profile/${therapist.id}`}
-              className="flex-shrink-0 w-[70%] sm:w-[45%] md:w-[30%] lg:w-[22%] bg-second rounded-lg overflow-hidden block transform transition-transform hover:scale-105 hover:shadow-xl border-4 border-yellow-500"
+              className="flex-shrink-0 w-[65%] sm:w-[40%] md:w-[28%] lg:w-[22%] bg-second rounded-lg overflow-hidden block transform transition-transform hover:scale-105 hover:shadow-xl border-4 border-yellow-500"
             >
               {/* 画像部分 */}
-              <div className="relative w-full pb-[140%]">
+              <div className="relative w-full pb-[120%]">
                 <Image
                   src={`/images/therapists/${therapist.id}/${therapist.id}1.jpg`}
                   alt={therapist.name}
@@ -35,7 +40,7 @@ const TodayTherapists = () => {
               </div>
 
               {/* テキスト部分 */}
-              <div className="p-4 bg-white">
+              <div className="p-3 bg-white">
                 <p className="text-sm text-gray-700 mb-1">
                   {therapist.age}歳 / {therapist.height}cm
                 </p>
