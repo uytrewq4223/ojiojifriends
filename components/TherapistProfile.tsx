@@ -44,30 +44,22 @@ const TherapistProfile = ({ therapist }) => {
           </div>
           {/* サムネイル */}
           <div className="flex gap-2 mt-4 justify-center">
-            {Array.from({ length: 5 }, (_, index) => {
-              const image = images[index] || "default-thumbnail.png"; // 画像がない場合デフォルト画像を使用
-
-              return (
-                <div
-                  key={index}
-                  className={`relative w-16 h-16 cursor-pointer rounded-lg overflow-hidden ${mainImage === image ? "ring-4 ring-accent" : "ring-1 ring-gray-300"
-                    } transition-all duration-300`}
-                  onClick={() => setMainImage(image)}
-                >
-                  <Image
-                    src={
-                      image === "default-thumbnail.png"
-                        ? `/images/${image}` // デフォルト画像の場合
-                        : `/images/therapists/${therapist.id}/${image}` // 通常画像の場合
-                    }
-                    alt={`${therapist.name} thumbnail ${index + 1}`}
-                    layout="fill"
-                    objectFit="cover"
-                    className="rounded-lg"
-                  />
-                </div>
-              );
-            })}
+            {images.map((image, index) => (
+              <div
+                key={index}
+                className={`relative w-16 h-16 cursor-pointer rounded-lg overflow-hidden ${mainImage === image ? "ring-4 ring-accent" : "ring-1 ring-gray-300"
+                  } transition-all duration-300`}
+                onClick={() => setMainImage(image)}
+              >
+                <Image
+                  src={`/images/therapists/${therapist.id}/${image}`}
+                  alt={`${therapist.name} thumbnail ${index + 1}`}
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-lg"
+                />
+              </div>
+            ))}
           </div>
         </div>
 
