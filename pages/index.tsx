@@ -26,13 +26,29 @@ const MenuTile = ({ title, imageSrc, href }) => (
 export default function Home() {
   return (
     <Layout>
-      <HeroSection 
-        title=""
-        subtitle=""
-        backgroundImage="/images/hero/heroHome1.png"
+      <HeroSection
+        title="真夜中のアトリエへようこそ"
+        subtitle="最高の「癒し」をお約束いたします。"
+        backgroundImage="/images/hero/heroHome.png"
       />
+
+
+      <div className="mt-4 relative w-full max-w-screen-lg mx-auto mb-6">
+        <div className="relative w-[95%] pb-[33.33%] md:w-[80%] mx-auto">
+          <Image
+            src={"/images/main/mainbanner.png"}
+            alt={"mainbanner"}
+            layout="fill"
+            objectFit="cover"
+            className="rounded-sm shadow-md"
+          />
+        </div>
+      </div>
+
+
+
       <div className="container mx-auto py-0 px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 max-w-4xl mx-auto mt-3"> 
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 max-w-4xl mx-auto mt-3">
           <MenuTile
             title="セラピスト一覧"
             imageSrc="/images/main/menu1.jpg"
