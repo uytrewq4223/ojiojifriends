@@ -35,7 +35,7 @@ export default function Home() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 max-w-4xl mx-auto mt-3"> 
           <MenuTile
             title="セラピスト一覧"
-            imageSrc="/images/main/menu1.png"
+            imageSrc="/images/main/menu1.jpg"
             href="/therapists"
           />
           <MenuTile
