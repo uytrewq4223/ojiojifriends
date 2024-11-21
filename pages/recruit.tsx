@@ -95,7 +95,6 @@ export default function Recruit() {
                                 <th className="border border-gray-300 bg-gray-100 p-2 text-left">その他</th>
                                 <td className="border border-gray-300 p-2">
                                     <p>初回登録料10000円</p>
-                                    <p>以降、登録料、更新料、雑費、撮影費用などは一切なし。</p>
                                     <p>※毎月の性病検査は実費となります。</p>
                                 </td>
                             </tr>
