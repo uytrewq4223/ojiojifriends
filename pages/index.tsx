@@ -39,7 +39,7 @@ export default function Home() {
             href="/therapists"
           />
           <MenuTile
-            title="当店について"
+            title="ご利用方法"
             imageSrc="/images/main/menu2.png"
             href="/aboutus"
           />
