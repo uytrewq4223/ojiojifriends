@@ -27,9 +27,9 @@ export default function Home() {
   return (
     <Layout>
       <HeroSection 
-        title="真夜中のアトリエへようこそ"
-        subtitle="最高の「癒し」をお約束いたします。"
-        backgroundImage="/images/hero/heroHome.png"
+        title=""
+        subtitle=""
+        backgroundImage="/images/hero/heroHome1.png"
       />
       <div className="container mx-auto py-0 px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 max-w-4xl mx-auto mt-3"> 
