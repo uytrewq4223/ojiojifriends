@@ -6,6 +6,7 @@ export const therapistsData = [
       height: 172,
       description: "ユーモアがあり、周囲を和ませる存在です",
       tags: ["セクシー", "力持ち"],
+      availability:"today",
       questions: [
         { question: "好きな食べ物は？", answer: "スシロー" },
         { question: "体型は？", answer: "普通" },
@@ -27,6 +28,7 @@ export const therapistsData = [
       height: 171,
       description: "なごやかムードメーカーです！！やさしくあなたをリードします！",
       tags: ["笑顔", "トーク"],
+      availability:"today",
       questions: [
         { question: "好きな食べ物は？", answer: "トリトンです！" },
         { question: "体型は？", answer: "普通だと思います" },

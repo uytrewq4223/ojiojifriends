@@ -3,12 +3,13 @@ import Layout from '../components/Layout';
 import HeroSection from '../components/HeroSection';
 import Link from 'next/link';
 import Image from 'next/image';
-import BannerSection from '../components/BannerSection'; // インポート
+import BannerSection from '../components/BannerSection';
+import TodayTherapists from '../components/TodayTherapists'; // インポート
 
 const MenuTile = ({ title, imageSrc, href }) => (
   <Link href={href} legacyBehavior>
     <a className="group">
-      <div className="relative w-full pb-[55%]"> {/* 縦方向の余白を減らす*/}
+      <div className="relative w-full pb-[55%]">
         <Image
           src={imageSrc}
           alt={title}
@@ -16,7 +17,7 @@ const MenuTile = ({ title, imageSrc, href }) => (
           objectFit="cover"
         />
         <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-second p-4">
-          <h3 className="text-center font-semibold text-2xl">{title}</h3> {/* フォントサイズ調整 */}
+          <h3 className="text-center font-semibold text-2xl">{title}</h3>
         </div>
       </div>
     </a>
@@ -32,7 +33,6 @@ export default function Home() {
         backgroundImage="/images/hero/heroHome.png"
       />
 
-
       <div className="mt-4 relative w-full max-w-screen-lg mx-auto mb-6">
         <div className="relative w-[95%] pb-[33.33%] md:w-[80%] mx-auto">
           <Image
@@ -45,12 +45,10 @@ export default function Home() {
         </div>
       </div>
 
-
-
       <div className="container mx-auto py-0 px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 max-w-4xl mx-auto mt-3">
           <MenuTile
-            title="セラピスト一覧"
+            title="借りれる男一覧！"
             imageSrc="/images/main/menu1.jpg"
             href="/therapists"
           />
@@ -65,12 +63,16 @@ export default function Home() {
             href="/feeSystem"
           />
           <MenuTile
-            title="求人のお知らせ"
+            title="一緒に働きませんか"
             imageSrc="/images/main/menu4.jpg"
             href="/recruit"
           />
         </div>
       </div>
+
+      {/* 今日遊べる男セクション */}
+      <TodayTherapists />
+
       {/* バナーセクション */}
       <BannerSection />
     </Layout>

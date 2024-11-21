@@ -7,7 +7,7 @@ const BannerSection = () => {
     { src: '/images/banner/2.png', alt: 'Banner 2', link: '' },
     { src: '/images/banner/3.png', alt: 'Banner 3', link: '' },
     { src: '/images/banner/4.png', alt: 'Banner 4', link: '' } ,
-    { src: '/images/banner/4.png', alt: 'Banner 4', link: 'https://line.me/R/ti/p/@677txcvf' } 
+    { src: '/images/banner/5.png', alt: 'Banner 4', link: 'https://line.me/R/ti/p/@677txcvf' } 
   ];
 
   return (
