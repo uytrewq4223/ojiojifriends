@@ -10,14 +10,15 @@ const TodayTherapists = () => {
 
   return (
     <div className="my-8">
-      <h2 className="text-center text-2xl font-bold mb-6">今日遊べる男</h2>
+      <h2 className="text-center text-2xl font-bold mb-6">今日遊べるセラピスト</h2>
       <div className="container mx-auto max-w-[90%] p-4 border-4 border-yellow-500 rounded-lg shadow-xl bg-gradient-to-br from-yellow-200 to-yellow-400">
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+        {/* 横スクロールエリア */}
+        <div className="flex overflow-x-auto gap-6 pb-4">
           {availableTherapists.map((therapist) => (
             <Link
               key={therapist.id}
               href={`/profile/${therapist.id}`}
-              className="bg-second rounded-lg overflow-hidden block transform transition-transform hover:scale-105 hover:shadow-xl border-4 border-yellow-500"
+              className="flex-shrink-0 w-[70%] sm:w-[45%] md:w-[30%] lg:w-[22%] bg-second rounded-lg overflow-hidden block transform transition-transform hover:scale-105 hover:shadow-xl border-4 border-yellow-500"
             >
               {/* 画像部分 */}
               <div className="relative w-full pb-[140%]">

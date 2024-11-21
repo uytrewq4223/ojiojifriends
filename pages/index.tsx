@@ -48,7 +48,7 @@ export default function Home() {
       <div className="container mx-auto py-0 px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 max-w-4xl mx-auto mt-3">
           <MenuTile
-            title="借りれる男一覧！"
+            title="セラピスト一覧！"
             imageSrc="/images/main/menu1.jpg"
             href="/therapists"
           />
