@@ -29,7 +29,7 @@ export default function Home() {
     <Layout>
       <HeroSection
         title="真夜中のアトリエへようこそ"
-        subtitle="最高の「癒し」をお約束いたします。"
+        subtitle="札幌女性用風俗"
         backgroundImage="/images/hero/heroHome.png"
       />
 
