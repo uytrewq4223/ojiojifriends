@@ -54,7 +54,7 @@ export default function Home() {
           />
           <MenuTile
             title="ご利用方法"
-            imageSrc="/images/main/menu2.png"
+            imageSrc="/images/main/menu2.jpg"
             href="/aboutus"
           />
           <MenuTile
